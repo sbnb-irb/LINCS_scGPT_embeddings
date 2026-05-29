@@ -23,11 +23,8 @@ LINCS_scGPT_embeddings/
 ├── 01_Fine_Tuning/                       scGPT fine-tuning script
 │   ├── finetune_scgpt_full_lincs.py
 │   └── Models/                           Fine-tuned model checkpoints
-├── 02_Obtain_Embeddings/                 Embedding extraction scripts and precomputed LINCS embeddings
-│   ├── obtain_embeddings.py
-│   ├── embeddings_pretrained.h5ad
-│   ├── embeddings_full.h5ad
-│   └── embeddings_HQ.h5ad
+├── 02_Obtain_Embeddings/                 Embedding extraction scripts 
+│   └── obtain_embeddings.py
 ├── 03_Distance_Integration/              Nearest-neighbor distance calculation between embeddings
 │   └── NN_calculation.py
 ├── 04_Knowledge_Extraction/              MoA inference and compound-genetic perturbation analyses
@@ -47,11 +44,12 @@ LINCS_scGPT_embeddings/
 ```
 ## Data availability
 
-Precomputed embeddings are included in `02_Obtain_Embeddings/`.
+Precomputed LINCS embedding files are not included in this GitHub repository because of their large file size. They are provided through Zenodo.
+Zenodo record: `<add>`
 
 Fine-tuned model checkpoints are included in `01_Fine_Tuning/Models/`.
 
-Large outputs (distances) are available upon request 
+Large derived outputs, including nearest-neighbor distance matrices, are not stored in this repository and are available upon request.
 
 This repository does not include LINCS Level 3 matrices, FRoGS compound-target annotations or GSE51212 raw data. Please download them from their original sources: 
 
@@ -121,9 +119,15 @@ Main output:
 
 - `.h5ad` file with `X_scGPT` stored in `.obsm`
 
-If you only want to use the precomputed embeddings, start from:
+If you only want to use the precomputed embeddings, download them from Zenodo and place them in [02_Obtain_Embeddings/](./02_Obtain_Embeddings/).
 
-[02_Obtain_Embeddings/embeddings_full.h5ad](./02_Obtain_Embeddings/embeddings_full.h5ad) and [02_Obtain_Embeddings/embeddings_full.h5ad](./02_Obtain_Embeddings/embeddings_HQ.h5ad)
+Expected files:
+
+`02_Obtain_Embeddings/embeddings_pretrained.h5ad`
+`02_Obtain_Embeddings/embeddings_full.h5ad`
+`02_Obtain_Embeddings/embeddings_HQ.h5ad`
+
+These files correspond to embeddings extracted from the pretrained model, the fine-tuned model using the full LINCS dataset, and the high-quality subset, respectively.
 
 
 ### 4. Compute nearest-neighbor distances 
