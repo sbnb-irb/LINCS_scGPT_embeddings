@@ -25,10 +25,10 @@
 
 # =============================================================================
 # RUN EXAMPLE: 
-# python fine_tune_lincs.py \
-#   --adata-path ./LINCS_scGPT_embeddings/Data/LINCS_full.h5ad \
-#   --output-dir ./LINCS_scGPT_embeddings/01_Fine_Tuning/Results \
-#   --wandb-dir ./LINCS_scGPT_embeddings/01_Fine_Tuning/wandb \
+# python finetune_scgpt_full_lincs.py \
+#   --adata-path ./LINCS_scGPT_embeddings/Data/LINCS_full.h5ad \ # path to the input data (GEx) in AnnData format
+#   --output-dir ./LINCS_scGPT_embeddings/01_Fine_Tuning/Results \ # directory to save the fine-tuned model 
+#   --wandb-dir ./LINCS_scGPT_embeddings/01_Fine_Tuning/wandb \ # directory to save the wandb logs
 #   --epochs 20 \
 #   --batch-size 32 \
 #   --learning-rate 1e-4
@@ -233,8 +233,6 @@ print(f"save to {save_dir}")
 logger = scg.logger
 scg.utils.add_file_handler(logger, save_dir / "run.log")
 
-with open(save_dir / "cli_args.json", "w") as handle:
-    json.dump(vars(args), handle, indent=2)
 
 adata_lincs = sc.read_h5ad(adata_path)
 adata_lincs.var.set_index(adata_lincs.var["gene_name"], inplace=True)
