@@ -45,6 +45,7 @@ LINCS_scGPT_embeddings/
 ## Data availability
 
 Precomputed LINCS embedding files are not included in this GitHub repository because of their large file size. They are provided through Zenodo.
+
 Zenodo record: `<add>`
 
 Fine-tuned model checkpoints are included in `01_Fine_Tuning/Models/`.
