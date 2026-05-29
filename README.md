@@ -48,7 +48,7 @@ Precomputed LINCS embedding files are not included in this GitHub repository bec
 
 Zenodo record: `<add>`
 
-Fine-tuned model checkpoints are included in `01_Fine_Tuning/Models/`.
+Fine-tuned model checkpoints are included in [01_Fine_Tuning/Models/](./01_Fine_Tuning/Models/).
 
 Large derived outputs, including nearest-neighbor distance matrices, are not stored in this repository and are available upon request.
 
@@ -124,9 +124,9 @@ If you only want to use the precomputed embeddings, download them from Zenodo an
 
 Expected files:
 
-`02_Obtain_Embeddings/embeddings_pretrained.h5ad`
-`02_Obtain_Embeddings/embeddings_full.h5ad`
-`02_Obtain_Embeddings/embeddings_HQ.h5ad`
+- `02_Obtain_Embeddings/embeddings_pretrained.h5ad`
+- `02_Obtain_Embeddings/embeddings_full.h5ad`
+- `02_Obtain_Embeddings/embeddings_HQ.h5ad`
 
 These files correspond to embeddings extracted from the pretrained model, the fine-tuned model using the full LINCS dataset, and the high-quality subset, respectively.
 
