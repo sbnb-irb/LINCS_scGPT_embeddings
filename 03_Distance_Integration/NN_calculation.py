@@ -1,6 +1,6 @@
 # =============================================================================
 # RUN EXAMPLE: 
-# python compute_nn_distances.py \
+# python NN_calculation.py \
 #   --ref-adata ./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad \
 #   --query-adata ./LINCS_scGPT_embeddings/query_data.h5ad \
 #   --output-dir ./LINCS_scGPT_embeddings/Results/NN_distances \

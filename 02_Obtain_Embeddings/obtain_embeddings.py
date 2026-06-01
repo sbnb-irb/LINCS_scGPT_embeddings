@@ -1,6 +1,6 @@
 # =============================================================================
 # RUN EXAMPLE: 
-# python embed_lincs_profiles.py \
+# python obtain_embeddings.py \
 #   --adata-path ./LINCS_scGPT_embeddings/Data/LINCS_full.h5ad \
 #   --model-dir ./LINCS_scGPT_embeddings/01_Fine_Tuning/Results/my_run \
 #   --output-path ./LINCS_scGPT_embeddings/02_Embeddings/LINCS_full_scGPT.h5ad \

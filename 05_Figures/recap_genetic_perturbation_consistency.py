@@ -1,7 +1,7 @@
 # =============================================================================
 # RUN EXAMPLE: 
 # python recap_genetic_perturbation_consistency.py \
-#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \
+#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
 #   --output-dir ./LINCS_scGPT_embeddings/results/genetic_consistency \
 #   --label full_scGPT \
 #   --gene-label-column cmap_name \

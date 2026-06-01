@@ -1,10 +1,10 @@
 # =============================================================================
 # RUN EXAMPLE: 
 # python recap_chemical_similarity.py \
-#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \
-#   --compound-info-path ./LINCS_scGPT_embeddings/cmp_info.txt \
+#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
+#   --compound-info-path ./LINCS_scGPT_embeddings/Data/Intermediate_files/cmp_info.txt \
 #   --output-dir ./LINCS_scGPT_embeddings/results/chemical_similarity \
-#   --label full_scGPT \
+#   --label FT \
 #   --n-samples 10 \
 #   --top-percent 0.1
 # =============================================================================
