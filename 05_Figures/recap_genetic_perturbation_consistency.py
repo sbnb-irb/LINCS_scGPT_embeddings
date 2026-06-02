@@ -1,7 +1,7 @@
 # =============================================================================
 # RUN EXAMPLE: 
 # python recap_genetic_perturbation_consistency.py \
-#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
+#   --adata-path ./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
 #   --output-dir ./LINCS_scGPT_embeddings/results/genetic_consistency \
 #   --label full_scGPT \
 #   --gene-label-column cmap_name \
@@ -22,7 +22,7 @@ from tqdm import tqdm
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate genetic perturbation consistency with AUROC.")
-    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
+    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
     parser.add_argument("--output-dir", required=True, help="Directory where result pickles are written.")
     parser.add_argument("--label", required=True, help="Run label used in output filenames.")
     parser.add_argument(

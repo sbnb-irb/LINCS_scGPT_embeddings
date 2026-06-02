@@ -2,8 +2,8 @@
 # You can download the B4 signatures from the Chemical Checker web: https://chemicalchecker.com/api/db/getFile/root/B4.h5/
 # RUN EXAMPLE: 
 # python recap_target_profile_similarity_b4.py \
-#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \
-#   --compound-info-path ./LINCS_scGPT_embeddings/cmp_info.txt \
+#   --adata-path ./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad \
+#   --compound-info-path ./LINCS_scGPT_embeddings/Data/Intermediate_files/cmp_info.txt \
 #   --cc-b4-path ./LINCS_scGPT_embeddings/ChemicalChecker/sign3.h5 \
 #   --output-dir ./LINCS_scGPT_embeddings/results/target_similarity \
 #   --label full_scGPT \
@@ -11,13 +11,10 @@
 #   --top-percent 0.1
 # =============================================================================
 
-
-
 import argparse
 import pickle
 import sys
 from pathlib import Path
-
 import h5py
 import numpy as np
 import pandas as pd
@@ -28,8 +25,8 @@ from tqdm import tqdm
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate target profile similarity recapitulation in Chemical Checker B4 space.")
-    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
-    parser.add_argument("--compound-info-path",  default="./LINCS_scGPT_embeddings/cmp_info.txt", help="LINCS compoundinfo_beta.txt path.")
+    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
+    parser.add_argument("--compound-info-path",  default="./LINCS_scGPT_embeddings/Data/Intermediate_files/cmp_info.txt", help="LINCS compoundinfo_beta.txt path.")
     parser.add_argument("--cc-b4-path", required=True, help="Chemical Checker B4 sign3.h5 file.")
     parser.add_argument("--output-dir", required=True, help="Directory where result pickles are written.")
     parser.add_argument("--label", required=True, help="Run label used in output filenames.")

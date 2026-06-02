@@ -1,7 +1,7 @@
 # =============================================================================
 # RUN EXAMPLE: 
 # python recap_chemical_similarity.py \
-#   --adata-path ./LINCS_scGPT_embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
+#   --adata-path ./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad \ ### You need to add the GEx to the adata.X for comparison 
 #   --compound-info-path ./LINCS_scGPT_embeddings/Data/Intermediate_files/cmp_info.txt \
 #   --output-dir ./LINCS_scGPT_embeddings/results/chemical_similarity \
 #   --label FT \
@@ -27,8 +27,8 @@ from tqdm import tqdm
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate chemical similarity recapitulation with AUROC.")
-    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
-    parser.add_argument("--compound-info-path",  default="./LINCS_scGPT_embeddings/cmp_info.txt", help="LINCS compoundinfo_beta.txt path.")
+    parser.add_argument("--adata-path", default="./LINCS_scGPT_embeddings/02_Obtain_Embeddings/embeddings_full.h5ad", help="AnnData file containing GEx and X_scGPT embeddings.")
+    parser.add_argument("--compound-info-path",  default="./LINCS_scGPT_embeddings/Data/Intermediate_files/cmp_info.txt", help="LINCS compoundinfo_beta.txt path.")
     parser.add_argument("--output-dir", required=True, help="Directory where result pickles are written.")
     parser.add_argument("--label", required=True, help="Run label used in output filenames.")
     parser.add_argument("--n-samples", type=int, default=10, help="Number of repeated one-profile-per-compound samplings.")
