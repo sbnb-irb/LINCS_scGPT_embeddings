@@ -46,7 +46,7 @@ LINCS_scGPT_embeddings/
 
 Precomputed LINCS embedding files are not included in this GitHub repository because of their large file size. They are provided through Zenodo.
 
-Zenodo record: `<add>`
+Zenodo record: https://zenodo.org/records/20925618
 
 Fine-tuned model checkpoints are included in [01_Fine_Tuning/Models/](./01_Fine_Tuning/Models/).
 
@@ -173,5 +173,7 @@ The fine-tuning pipeline is adapted from the `scGPT` tutorial workflow by the Bo
 Please cite the original `scGPT` publication and this work when referring to embeddings or reusing this analysis.
 
 ```
-
+Task-adapted biological foundation models uncover perturbation-centric representations
+Elena Pareja-Lorente, Patrick Aloy
+bioRxiv 2026.06.30.735584; doi: https://doi.org/10.64898/2026.06.30.735584
 ```
